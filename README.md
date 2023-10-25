@@ -1,15 +1,16 @@
-# project_flutter
+# tokokita
 
-![Registrasi](Registrasi_Page.png)
+A new Flutter project.
 
-![Login](/Login_Page.png) 
+## Getting Started
 
-![produk_page](/List_Produk.png)
+This project is a starting point for a Flutter application.
 
-![produk_detail](Detail_Produk.png)
+A few resources to get you started if this is your first Flutter project:
 
-![produk_edit](Edit_Produk.png)
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-![produk_tambah](Tambah_Produk.png)
-
-![produk_delete](Delete_Produk.png)
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

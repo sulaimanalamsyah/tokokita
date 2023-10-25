@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tokoKitaIman/model/produk.dart';
-import 'package:tokoKitaIman/ui/produk_form.dart';
+import 'package:tokokita/model/produk.dart';
+import 'package:tokokita/ui/produk_form.dart';
 
 class ProdukDetail extends StatefulWidget {
   Produk? produk;
@@ -16,7 +16,7 @@ class _ProdukDetailState extends State<ProdukDetail> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Detail Produk Sulaiman'),
+        title: const Text('Detail Produk'),
       ),
       body: Center(
         child: Column(
@@ -44,20 +44,23 @@ class _ProdukDetailState extends State<ProdukDetail> {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        //Tombol Edit
         OutlinedButton(
-            child: const Text("Edit"),
-            onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ProdukForm(
-                            produk: widget.produk!,
-                          )));
-            }),
-        //Tombol Hapus
+          child: const Text("EDIT"),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ProdukForm(
+                  produk: widget.produk!,
+                ),
+              ),
+            );
+          },
+        ),
         OutlinedButton(
-            child: const Text("Delete"), onPressed: () => confirmHapus()),
+          child: const Text("DELETE"),
+          onPressed: () => confirmHapus(),
+        ),
       ],
     );
   }
@@ -66,16 +69,23 @@ class _ProdukDetailState extends State<ProdukDetail> {
     AlertDialog alertDialog = AlertDialog(
       content: const Text("Yakin ingin menghapus data ini?"),
       actions: [
-        //tombol hapus
         OutlinedButton(
           child: const Text("Ya"),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ProdukForm(
+                  produk: widget.produk!,
+                ),
+              ),
+            );
+          },
         ),
-        //tombol batal
         OutlinedButton(
           child: const Text("Batal"),
           onPressed: () => Navigator.pop(context),
-        )
+        ),
       ],
     );
 
